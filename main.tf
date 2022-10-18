@@ -14,6 +14,9 @@ provider "aws" {
   region = "us-east-1"
 }
 
+resource "aws_iam_role" "test_role" {
+  name = "test_role"
+}
 
 data "aws_caller_identity" "current" {}
 
@@ -28,3 +31,4 @@ output "caller_arn" {
 output "caller_user" {
   value = data.aws_caller_identity.current.user_id
 }
+
