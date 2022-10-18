@@ -81,6 +81,6 @@ resource "spacelift_mounted_file" "context-secret-file" {
 # https://docs.spacelift.io/concepts/context#attaching-and-detaching
 resource "spacelift_context_attachment" "managed2" {
   context_id = spacelift_context.managed2.id
-  stack_id   = spacelift_stack.managed2.id
+  stack_id   = spacelift_stack.managed.id
   priority   = 0
 }
